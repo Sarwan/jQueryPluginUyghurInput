@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="jquery-1.10.2.js"></script>
+    <script src="Jquery.Plugin.UyghurInput.js"></script>
+    <style type="text/css">
+        body,input,textarea {
+        direction:rtl;
+        font-family:"ALKATIP Tor","UKIJ Tuz Tom","Microsoft Uighur",Arial;
+        }
+        textarea, input {
+        width:400px;
+        }
+        .code {
+         border-style: solid;
+            border-color: inherit;
+            direction:ltr;
+            text-align:left;
+            background-color:whitesmoke;
+            width:80%;
+            border-width:thick;
+            height: 274px;
+        }
+        .auto-style1 {
+            color: #CC0000;
+        }
+        #inputArea {
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // $(document).Uyghurinput();
+            $("#txtName").Uyghurinput();
+
+            $(".uyghur").Uyghurinput();
+            $("#inputArea").Uyghurinput();
+        });
+
+    </script>
+    <h1>JQuery ئۇيغۇرچە كىرگۈزگۈچ قوشۇلمىسى</h1>
+    <h3>ئىشلىتىش ئۇسۇلى:</h3>
+    
+    <ul>
+        <li>
+            <p>Jquery نىڭ 1.x نەشرىنى چۈشۈرۈپ تور بېتىڭىز بىلەن بىر مۇندەرىجىدە قويۇڭ.(2.x نەشرى ie6,7,8 نى قوللىمايدۇ.)</p>
+        </li>
+        <li>
+            <p>Jquery.Plugin.UyghurInput.js نى چۈشۈرۈپ تور بېتىڭىز بىلەن بىر مۇندەرىجىدە قويۇڭ.</p>
+        </li>
+        <li>بەت بېشىغا بۇ كودنى قىستۇرۇڭ:
+            <br />
+            <div class="code">
+
+                &lt;header&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;script src=&quot;jquery-1.10.2.js&quot;&gt;&lt;/script&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;script src=&quot;Jquery.Plugin.UyghurInput.js&quot;&gt;&lt;/script&gt;<br />
+&nbsp;&nbsp;&nbsp; ...<br />
+                &lt;/header&gt;</div>
+        </li>
+        <li>
+            ئايرىم بىر script بۆلىكى قىستۇرۇپ ئىچىگە تۆۋەندىكى كودنى يېزىڭ:<br />
+            <div class="code">
+
+                <br />
+&nbsp;&nbsp;&nbsp; &lt;script type=&quot;text/javascript&quot;&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $(document).ready( function () {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });<br />
+&nbsp;&nbsp;&nbsp; &lt;/script&gt;<br />
+            </div>
+
+        </li>
+        <li>
+            بارلىق تېكىست رامكىلىرىغا ئۇيغۇرچە كىرگۈزۈش(قىزىل رەڭدە بويالغان كود):
+            <br />
+                        <div class="code">
+
+                <br />
+&nbsp;&nbsp;&nbsp; &lt;script type=&quot;text/javascript&quot;&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $(document).ready( function () {<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="auto-style1">&nbsp;$(document).Uyghurinput();</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });<br />
+&nbsp;&nbsp;&nbsp; &lt;/script&gt;<br />
+            </div>
+
+        </li>
+        <li>
+            مەلۇم بىر رامكىغىلا كىرگۈزۈش:<br />
+                        <div class="code">
+
+                <br />
+&nbsp;&nbsp;&nbsp; &lt;script type=&quot;text/javascript&quot;&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $(document).ready( function () {<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="auto-style1">&nbsp;$(&quot;#txtName&quot;).Uyghurinput();</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });<br />
+&nbsp;&nbsp;&nbsp; &lt;/script&gt;<br />
+                            <br />
+                            <input type="text" id="txtName" />
+            </div>
+        </li>
+        <li>
+            خاسلىق نامىغا ئاساسەن كىرگۈزۈش:<br />
+                        <div class="code">
+
+                <br />
+&nbsp;&nbsp;&nbsp; &lt;script type=&quot;text/javascript&quot;&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $(document).ready( function () {<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="auto-style1">&nbsp;$(&quot;.uyghur&quot;).Uyghurinput();</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });<br />
+&nbsp;&nbsp;&nbsp; &lt;/script&gt;<br />
+                            <input type="text" id="txtLastName" class="uyghur" value=".uyghur" />
+                            <input type="text" id="txtAddress" class="uyghur" value=".uyghur" />
+                            <input type="text" id="txteMail" value=".other"  />
+            </div>
+            
+        </li>
+        <li>
+            بالا كونتروللارنىڭ ھەممىگە كىرگۈزۈش:<br />
+                        <div class="code">
+
+                <br />
+&nbsp;&nbsp;&nbsp; &lt;script type=&quot;text/javascript&quot;&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $(document).ready( function () {<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="auto-style1">&nbsp;$(&quot;#inputArea&quot;).Uyghurinput();</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });<br />
+&nbsp;&nbsp;&nbsp; &lt;/script&gt;<br />
+                            <div id="inputArea">
+                                 <input type="text" id="txtCountry"  />
+                                 <input type="text" id="txtCity" />
+                                 <input type="text" id="txtTown"  /><br />
+                                <textarea rows="3" id="Memo"></textarea>
+                            </div>
+            </div>
+        </li>
+    </ul>
+    <div>
+        <p style="text-align: center">
+            ئۇيغۇر يۇمشاق دېتال ئىجادىيەت تورى
+            <br />
+            <a href="http://www.uyghurdev.net">www.UyghurDev.net</a> & <a href="http://www.uyghurdev.net">lab.uyghurdev.net</a>
+            <br />
+            by Sarwan
+        
+        </p>
+    </div>
+</body>
+</html>
