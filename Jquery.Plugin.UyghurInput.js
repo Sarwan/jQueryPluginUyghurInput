@@ -6,8 +6,10 @@
 
 //jQuery plugin function
 $.fn.Uyghurinput = function () {
-    this.keypress(function () { naddchar(event) });
-    this.keydown(function () { proc_kd(event) });
+    //this.keypress(function () { naddchar(event) }); // work fine in chrome,ie but not in firefox
+    //this.keydown(function () { proc_kd(event) });  // because firefox have different event handler
+    this.keypress(function (e) { e = e||event;   naddchar(e) }); 
+    this.keydown(function (e) { e = e||event;  proc_kd(e) });
 };
 
 var imode = 0; // input mode, default is Uyghur
